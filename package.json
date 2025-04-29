@@ -1,0 +1,21 @@
+{
+  "name": "job-filter-for-job-postings",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "css-build-dev": "postcss --output vendor/job-filter-bulma.css vendor/bulma.css",
+    "css-build-min": "postcss --use postcss-minify --map --output vendor/job-filter-bulma.min.css vendor/job-filter-bulma.css",
+    "css-build": "npm run css-build-dev && npm run css-build-min",
+    "css-watch": "npm run css-build-dev -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-minify": "^1.1.0",
+    "postcss-prefixer": "^3.0.0"
+  }
+}

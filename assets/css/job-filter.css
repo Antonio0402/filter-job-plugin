@@ -1,0 +1,60 @@
+:root {
+  color-scheme: light;
+  --bulma-body-background-color: ##f0f0f1;
+  --bulma-text: #363636;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    --bulma-body-background-color: #f0f0f1;
+    --bulma-text: #363636;
+  }
+}
+
+.job-filter-spinning-loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.job_search_form_toggle {
+  transition: all 0.3s ease-in-out;
+}
+
+.job_search_form_toggle[aria-expanded='false'] svg {
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.job_search_form_toggle[aria-expanded='true'] svg {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+#job_search_form.job-filter-collapsed :is(.job-filter-search_input_wrapper, .job-filter-search_filter_wrapper) {
+  /* Create a collapse animation with grid */
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+}
+#job_search_form :is(.job-filter-search_input_wrapper, .job-filter-search_filter_wrapper) {
+  /* Create a collapse animation with grid */
+  display: grid;
+  max-height: auto;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}

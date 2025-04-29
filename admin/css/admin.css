@@ -1,0 +1,13 @@
+:root {
+  color-scheme: light;
+  --bulma-body-background-color: ##f0f0f1;
+  --bulma-text: #363636;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    --bulma-body-background-color: #f0f0f1;
+    --bulma-text: #363636;
+  }
+}
